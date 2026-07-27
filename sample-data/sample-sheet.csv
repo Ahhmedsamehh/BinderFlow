@@ -1,0 +1,2 @@
+id,target_pdb,contigs,hotspots
+ctla4,./sample-data/ctla4.pdb,C3-23/0 70-100,C3;C10;C20;C15

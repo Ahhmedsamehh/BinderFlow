@@ -1,0 +1,3 @@
+input:       ./sample-data/sample-sheet.csv
+outdir:      results
+num_designs: 5
