@@ -1,5 +1,5 @@
 process rf_diffusion {
-    container 'ahhmedsamehh/rfdiffusion-standalone:latest'
+    container 'ahhmedsamehh/rfdiffusion-standalone:v1-cu116'
 
     input:
     tuple val(meta), path(target_pdb)
