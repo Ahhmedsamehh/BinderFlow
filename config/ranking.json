@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "gates": {
+    "binder_plddt": {"min": 70},
+    "interchain_pae": {"max": 15},
+    "interface_residue_pairs": {"min": 1},
+    "interchain_clashing_atom_pairs": {"max": 10},
+    "binder_target_aligned_ca_rmsd_a": {"max": 5}
+  },
+  "metrics": {
+    "iptm": {"direction": "higher", "weight": 0.25},
+    "interchain_pae": {"direction": "lower", "weight": 0.20},
+    "binder_plddt": {"direction": "higher", "weight": 0.15},
+    "binder_target_aligned_ca_rmsd_a": {"direction": "lower", "weight": 0.15},
+    "binder_buried_sasa_a2": {"direction": "higher", "weight": 0.10},
+    "exposed_hydrophobic_sasa_fraction": {"direction": "lower", "weight": 0.10},
+    "aggregation_window_hydropathy_max": {"direction": "lower", "weight": 0.05}
+  }
+}

@@ -1,0 +1,8 @@
+name: binderflow-colabfold
+channels: [conda-forge, bioconda]
+dependencies:
+  - python=3.10
+  - colabfold=1.5.5
+  # ColabFold 1.5.5 pins jax 0.4.25. dm-haiku >= 0.0.13 calls jax.core.take_current_trace,
+  # which that jax does not have, so the solver's newest haiku breaks `import haiku`.
+  - dm-haiku=0.0.12

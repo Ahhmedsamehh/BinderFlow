@@ -1,3 +1,6 @@
 input:       ./sample-data/sample-sheet.csv
 outdir:      results
 num_designs: 5
+sequences_per_backbone: 4
+stop_after: full
+# Supply --models and --colabfold_models as absolute paths on your GPU machine.

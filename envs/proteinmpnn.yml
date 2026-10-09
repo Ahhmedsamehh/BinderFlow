@@ -1,0 +1,11 @@
+name: binderflow-proteinmpnn
+channels: [pytorch, conda-forge]
+dependencies:
+  - python=3.9
+  - pytorch=1.12.1
+  # MKL >= 2024.1 dropped iJIT_NotifyEvent, which PyTorch 1.12 conda builds still link against.
+  - mkl=2024.0
+  - numpy=1.23
+  - biopython=1.85
+  - pip
+  # ProteinMPNN weights and source are supplied through --proteinmpnn_script.

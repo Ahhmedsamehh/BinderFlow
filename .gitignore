@@ -1,0 +1,17 @@
+.nextflow*
+work/
+results/
+results-*/
+stub-results/
+full-stub-results/
+.venv/
+models/
+*.sif
+__pycache__/
+.DS_Store
+# macOS AppleDouble sidecars, created when the tree is copied via a Mac.
+._*
+# Third-party model code, fetched at pinned revisions by scripts/setup_third_party.sh.
+# ProteinMPNN in particular carries its model weights in-tree.
+/RFdiffusion/
+/ProteinMPNN/
