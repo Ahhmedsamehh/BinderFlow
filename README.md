@@ -8,6 +8,16 @@ binder–target complex. The ranker compares its geometry with the designed
 backbone and combines explicit confidence, interface and developability criteria.
 It exports every candidate and its component features, including failed filters.
 
+![BinderFlow workflow DAG: a sample sheet fans out through RFdiffusion, ProteinMPNN,
+ColabFold and developability features once per design, then gathers into a single
+ranking task.](docs/workflow-dag.svg)
+
+The workflow fans out once: `rf_diffusion` runs per sample, and its backbones are
+split so that every later per-design stage runs once per backbone. The
+`--sequences_per_backbone` sequences of a backbone are carried through that single
+task together, not as separate tasks. Only `rank_candidates` gathers, comparing
+every design in one task.
+
 **Status:** all stages are implemented and tested with mock model engines;
 real GPU inference and container builds remain unverified. Candidates are not
 experimentally validated binders. Immunogenicity is excluded. Aggregation and
